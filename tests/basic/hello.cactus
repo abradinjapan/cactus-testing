@@ -1,0 +1,4 @@
+[ main ]
+cactus.main()() = {
+    cactus.print.string("The tumbleweeds blow...%0a;")()
+}
