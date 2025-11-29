@@ -1,0 +1,11 @@
+[ general structure ]
+!structure = (
+    alpha !cactus.cell,
+    beta !cactus.banana,
+    gamma !cactus.oof
+)
+
+[ single argument structure ]
+!boop = (
+    beep !cactus.cell
+)

@@ -9,6 +9,8 @@ dragon.main()() = {
     dragon.error.print_if_occured(error)()
     cactus.run_test.aliases()(error)
     dragon.error.print_if_occured(error)()
+    cactus.run_test.structures()(error)
+    dragon.error.print_if_occured(error)()
 }
 
 [ run test ]
@@ -26,6 +28,16 @@ cactus.run_test.aliases()(compilation.error !dragon.error) = {
     [ get json files ]
     dragon.set("../cactus/source/files.json")(cactus_compiler.json.file_path)
     dragon.set("./tests/aliases/files.json")(cactus_testing.json.file_path)
+
+    [ run test ]
+    cactus.run_test(cactus_compiler.json.file_path, cactus_testing.json.file_path)(compilation.error, program.result, program.error)
+}
+
+[ run test functions ]
+cactus.run_test.structures()(compilation.error !dragon.error) = {
+    [ get json files ]
+    dragon.set("../cactus/source/files.json")(cactus_compiler.json.file_path)
+    dragon.set("./tests/structures/files.json")(cactus_testing.json.file_path)
 
     [ run test ]
     cactus.run_test(cactus_compiler.json.file_path, cactus_testing.json.file_path)(compilation.error, program.result, program.error)

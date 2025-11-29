@@ -1,9 +1,2 @@
 [ alias ]
 !cactus.string = !basic.buffer
-
-[ structure ]
-!structure = (
-    alpha !cactus.cell,
-    beta !cactus.banana,
-    gamma !cactus.oof
-)
